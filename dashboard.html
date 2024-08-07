@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="profileLink">Profile</a></li>
+                <li><a href="#" id="scheduleButton">Schedule</a></li>
+                <li><a href="#" id="pointsButton">Points</a></li>
+                <li><button id="logoutButton">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+        <div class="side-menu-content">
+            <h2>Profile</h2>
+            <p id="sideUsername">Username: <span id="sideUsernameContent"></span></p>
+            <button id="sideLogoutButton">Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section id="profile" class="dashboard-section">
+            <h1>Welcome, <span id="userName">User</span></h1>
+        </section>
+        <section id="time" class="dashboard-section">
+            <h2>Current Time</h2>
+            <p id="currentTime"></p>
+        </section>
+        <section id="schedule" class="dashboard-section">
+            <h2>Schedule</h2>
+            <ul id="scheduleList">
+                <!-- Schedule items will be populated here -->
+            </ul>
+            <div id="scheduleDropdown" class="schedule-dropdown">
+                <p id="scheduleReminder">You have a class today at 10:00 AM</p>
+            </div>
+        </section>
+        <section id="points" class="dashboard-section">
+            <h2>Points</h2>
+            <p id="userPoints">0</p>
+            <div id="pointsDropdown" class="points-dropdown">
+                <p id="pointsValue">42</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <h2>Admin Panel</h2>
+        <p>
+            <label for="userSelect">Select User:</label>
+            <select id="userSelect">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </p>
+        <p>
+            <label for="pointsInput">Points:</label>
+            <input type="number" id="pointsInput">
+        </p>
+        <button id="addPointsButton">Add Points</button>
+        <button id="subtractPointsButton">Subtract Points</button>
+        <p id="adminMessage"></p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Your Company</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
